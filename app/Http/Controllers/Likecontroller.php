@@ -29,7 +29,6 @@ class Likecontroller extends Controller
         }
 
         $post->likes()->create([
-            // 'user_id' => $post->user_id,
             'user_id' => $request->user()->id,
         ]);
         // $user = auth()->user();

@@ -1,11 +1,13 @@
 body {
-    background-color: azure;
+    background-color: #FFFFFF;
     max-width: 100%;
     margin: 0%;
+    font-family: Segoe UI;
 }
 
+/* Layout */
 .nav-bar {
-    background-color: rgb(145, 175, 241);
+    background-color: #F6F9F9;
     padding: 8px;
     display: flex;
     justify-content: space-between;
@@ -15,60 +17,396 @@ body {
 .list-control {
     display: flex;
     list-style-type: none;
-    padding-left: 0px;
+    padding: 0px 20px;
 }
 
 .nav-link {
+    color: #4B4A4A;
     text-decoration: none;
-    padding: 4px;
-    border: none;
-    font-size: 16px;
+    padding: 8px 50px;
+    font-size: 18px;
     display: inline-block;
+    font-weight: 550;
+    /* font-size: 115%; */
 }
+
+.error {
+    color: red;
+    margin: 2px;
+    font-size: 110%;
+}
+
 
 .bttn {
     align-items: normal;
     background-color: inherit;
-    color: rgb(0, 0, 238);
     cursor: pointer;
     font: inherit;
-    width: auto;
-}
-
-/* index */
-.container-one {
-    display: flex;
-    justify-content: center;
+    font-weight: 550;
+    color: #4B4A4A;
+    border: none;
 }
 
 .content-one {
-    background-color: rgb(145, 175, 241);
-    width: 66.66%;
-    padding: 6px;
-    border-radius: 4px;
+    text-align: center;
+    margin: auto;
+    width: 30%;
 }
 
-/* Register */
-.w-4 {
-    width: 33.33%;
+.form-header {
+    font-size: 36px;
+    color: #4B4A4A;
 }
 
-.error {
-    border-color: red;
-    color: red;
+.input1,
+.button1 {
+    background-color: #ECECEC;
+    border-radius: 15px;
+    border-width: 0px;
+    width: 450px;
+    height: 48px;
+    font-size: 20px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    /* -webkit-border-radius: 0; */
 }
 
-/* Screen Read  */
-.sr-only {
-    position: absolute;
-    padding: 0;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-    height: 1px;
-    width: 1px;
-    margin: -1px;
+.errorinput {
+    border: 1px solid red;
+}
+
+.button1 {
+    background-color: #0C97BF;
+    border-radius: 32px;
+    color: #FFFFFF;
+}
+
+.content-one .sr-only {
+    font-size: 20px;
+    color: #4B4A4A;
+    text-align: right;
+}
+
+.checkbox {
+    border-color: #707070;
+    width: 16px;
+    height: 16px;
+}
+
+.remember {
+    color: #393838;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Segoe UI;
+    /* float: left; */
 }
 
 .form-control {
-    margin-bottom: 4px;
+    text-align: left;
+    padding-left: 12px;
+}
+
+p.have-account {
+    font-size: 15px;
+}
+
+a.link-login {
+    font-weight: bold;
+    text-decoration: none;
+    color: #393737;
+}
+
+/* Posts */
+.post {
+    width: 58%;
+    margin: auto;
+}
+
+.container-2 {
+    width: 90%;
+    margin: auto;
+}
+
+.post-body {
+    border-radius: 40px;
+    border: 1px solid black;
+    width: 90%;
+    height: 50px;
+    resize: none;
+    margin-top: 7%;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: Segoe UI;
+    padding-top: 2%;
+}
+
+.pic-name {
+    text-align: left;
+    margin-left: 4%;
+    margin-top: 8%;
+    display: inline-flex;
+    width: 100%;
+    /* margin: auto; */
+}
+
+.pic-name .prof-img {
+    display: inline-block;
+    padding-right: 12px;
+}
+
+.profile-img {
+    border-radius: 50%;
+    height: 42px;
+    width: 42px;
+    border: 1px ridge #707070;
+}
+
+.pic-name .postername-control {
+    margin-bottom: 10px;
+    text-align: left;
+    display: inline-block;
+    margin-top: 4px;
+}
+
+.poster-name {
+    font-size: 28px;
+    color: #302413;
+    text-decoration: none;
+}
+
+
+.body-container {
+    width: 80%;
+    text-align: justify;
+    margin-left: 4%;
+
+}
+
+.body-link {
+    color: #302413;
+    text-decoration: none;
+}
+
+.body-p {
+    margin-bottom: 0;
+    margin-top: 2px;
+    font-weight: 500;
+}
+
+.img-container {
+    text-align: left;
+    margin-left: 4%;
+}
+
+.time-posted {
+    color: #A2A2A2;
+    opacity: 90%;
+    font-size: 12px;
+    margin: 0px;
+}
+
+.posted-img {
+    border-radius: 16px;
+    max-width: 779px;
+    max-height: 380px;
+    margin-top: 2%;
+
+}
+
+.like-comment {
+    color: #302413;
+    font-size: 12px;
+    margin-top: 4px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.del-lik-unli,
+.like-unlike-reply {
+    display: inline-block;
+    padding-top: 0px;
+    margin: auto;
+    height: auto;
+}
+
+button.com,
+button.del {
+    padding-left: 25px;
+}
+
+
+.lud {
+    color: #302413;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 125%;
+    margin-top: 12%;
+
+}
+
+.comment-central {
+    padding-bottom: 10px;
+    display: inline-flex;
+
+}
+
+textarea.comment {
+    /* width: 80%; */
+    height: 40px;
+    font-size: 20px;
+    margin-top: 2%;
+}
+
+div.ico {
+    display: inline-flex;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    /* font-size: 18px; */
+}
+
+.comments-reply {
+    width: 80%;
+    margin: auto;
+    text-align: left;
+}
+
+.comments-adjust {
+    width: 90%;
+    margin: auto;
+    text-align: left;
+    margin-top: 3px;
+}
+
+.commenter {
+    font-size: 20px;
+    color: #302413;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.replier {
+    font-size: 16px;
+    color: #302413;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+p.comment {
+    margin-bottom: 0;
+    margin-top: 2px;
+    font-weight: 400;
+}
+
+p.reply {
+    margin-bottom: 0;
+    margin-top: 2px;
+    font-weight: 400;
+    font-size: 90%;
+}
+
+.lur {
+    font-size: 100%;
+    text-decoration: none;
+    margin-top: 0%;
+
+}
+
+.reply-arrange {
+    width: 85%;
+    margin: auto;
+    text-align: left;
+    margin-top: 0px;
+    margin-bottom: 2%;
+
+}
+
+.like-unlike-reply {
+    padding-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Heart shape */
+.heart {
+    background-color: black;
+    display: inline-block;
+    height: 10px;
+    margin: 0 10px;
+    position: relative;
+    top: 0;
+    transform: rotate(-45deg);
+    width: 10px;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    background-color: black;
+    border-radius: 50%;
+    height: 10px;
+    position: absolute;
+    width: 10px;
+}
+
+.heart:before {
+    top: -5px;
+    left: 0;
+}
+
+.heart:after {
+    left: 5px;
+    top: 0;
+}
+
+.like {
+    color: black;
+}
+
+/* Heart shape */
+.heart-x {
+    background-color: red;
+    display: inline-block;
+    height: 10px;
+    margin: 0 10px;
+    position: relative;
+    top: 0;
+    transform: rotate(-45deg);
+    width: 10px;
+}
+
+.heart-x:before,
+.heart-x:after {
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    height: 10px;
+    position: absolute;
+    width: 10px;
+}
+
+.heart-x:before {
+    top: -5px;
+    left: 0;
+}
+
+.heart-x:after {
+    left: 5px;
+    top: 0;
+}
+
+.unlike {
+    color: red;
 }

@@ -34,7 +34,7 @@ class LoginController extends Controller
         //remember already logged in user
         $remember = Request('remember');
         if (Auth::attempt($checkLogin, $remember)) {
-            return redirect()->route('dashboard');
+            return redirect()->route('post');
         } else
             // starts a flash session and returns a message for unregisstered users
             return back()->with('msge-1', 'Invalid login details');

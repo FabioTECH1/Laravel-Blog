@@ -22,12 +22,12 @@ class Comment extends Model
     {
         return $this->comment_likes->contains('user_id', $user->id); // to check a user exists in the likes for the post
     }
-    public function comments()
-    {
-        return $this->belongsTo(Post::class);  //linking the comments to the post 
-    }
     public function comment_likes()
     {
         return $this->hasMany(Comment_like::class);   //linking the posts to the like
+    }
+    public function comment_replies()
+    {
+        return $this->hasMany(Comment_reply::class);   //linking the comments to the reply
     }
 }

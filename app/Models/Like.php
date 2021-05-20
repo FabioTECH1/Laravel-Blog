@@ -13,9 +13,4 @@ class Like extends Model
         'user_id',
         'post_id'
     ];
-
-    public function likes()
-    {
-        return $this->belongsTo(Post::class);  //linking the likes to the post 
-    }
 }

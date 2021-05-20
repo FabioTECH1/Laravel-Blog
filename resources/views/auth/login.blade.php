@@ -4,7 +4,10 @@
 @section('content')
 
     <div class="container-one">
-        <div class="content-one w-4">
+        <div class="content-one">
+
+
+            <p class="form-header">Log into your Account</p>
             @if (session('msge-1'))
                 <p class="error">{{ session('msge-1') }} </p>
             @endif
@@ -12,33 +15,36 @@
                 @csrf
                 <div class="form-control">
                     <label for="email" class="sr-only">Email</label>
-                    <input type="email" name="email" placeholder="Your Email" value="{{ old('email') }}">
+                    <br>
+                    <input class="input1 @error('email')errorinput @enderror" type="email" name="email"
+                        value="{{ old('email') }}">
                 </div>
                 @error('email')
                     <p class="error">{{ $message }}</p>
                 @enderror
                 <div class="form-control">
                     <label for="password" class="sr-only">Password</label>
-                    <input type="password" name="password" placeholder="Your password">
+                    <br>
+                    <input class="input1 @error('password')errorinput @enderror" type="password" name="password">
                 </div>
                 @error('password')
                     <p class="error">{{ $message }}</p>
                 @enderror
                 <div class="form-control">
-                    <input type="checkbox" name="remember">
-                    <label for="Remember Me" class="">Remember me</label>
+                    <input class="checkbox" type="checkbox" name="remember">
+                    <label for="Remember Me" class="remember">Remember me</label>
 
                 </div>
                 <a href="{{ route('password.request') }}">Forgot Password ?</a>
 
                 <div class="form-control">
-                    <button type="submit">Login</button>
+                    <button class="button1" type="submit">Log In</button>
                 </div>
 
 
             </form>
-
         </div>
+    </div>
 
     </div>
 

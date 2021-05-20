@@ -2,25 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Comment;
-use App\Models\Comment_like;
-use Illuminate\Http\Request;
+use App\Models\Comment_reply;
 use App\Models\Post;
-use App\Models\Like;
-use App\Models\User;
+use App\Models\Reply_like;
+use Illuminate\Http\Request;
 
-
-class CommentLikeController extends Controller
+class ReplyLikeController extends Controller
 {
     public function __construct()
     {
         $this->middleware('auth');
     }
-
-    //liking a comment
-    public function store(Post $post, Comment $comment, Request $request)
+    //liking a post
+    public function store($id, Post $post, Comment_reply $reply, Request $request)
     {
-        $comment->comment_likes()->create([
+        dd($reply);
+        $reply->reply_likes()->create([
             'user_id' => $request->user()->id,
         ]);
         // if (!$post->likes()->onlyTrashed()->where('user_id', $request->user()->id)->count()) {
@@ -29,9 +26,9 @@ class CommentLikeController extends Controller
         return back();
     }
     // unliking a comment
-    public function destroy(Comment $comment, Request $request)
+    public function destroy(Comment_reply $reply, Request $request)
     {
-        Comment_like::where('comment_id', $comment->id)->where('user_id', $request->user()->id)->delete();
+        Reply_like::where('comment_replies_id', $reply->id)->where('user_id', $request->user()->id)->delete();
         return back();
     }
 }

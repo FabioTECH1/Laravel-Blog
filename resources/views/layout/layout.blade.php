@@ -7,26 +7,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> @yield('title')</title>
 
-
-    {{-- <link rel="stylesheet" href="{{ asset('css/app.css') }}"> --}}
-    <style>
-        .error {
-            color: red;
-        }
-
-    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
 </head>
 
 <body>
     {{-- <div class="nav-control"> --}}
     <nav class="nav-bar">
         <ul class="list-control">
-            <li class="nav-list">
-                <a href="{{ route('home') }}" class="nav-link">Home</a>
-            </li>
+            @guest
+                <li class="nav-list">
+                    <a href="{{ route('home') }}" class="nav-link">Home</a>
+                </li>
+            @endguest
+
             <li class="nav-list">
                 <a href="{{ route('dashboard') }}" class="nav-link">Dashboard</a>
             </li>
+
             <li class="nav-list">
                 <a href="{{ route('post') }}" class="nav-link">Posts</a>
             </li>
@@ -35,13 +34,13 @@
             {{-- Check if logged in --}}
             @if (auth()->user())
                 <li class="nav-list">
-                    <a href="{{ route('register') }}" class="nav-link">{{ auth()->user()->name }}</a>
+                    <a href="#" class="nav-link">{{ auth()->user()->name }}</a>
                 </li>
                 <li class="nav-list">
                     <form action="{{ route('logout') }}" method="post" id="form_1">
                         @csrf
-                        <a href="javascript:{}" onclick="document.getElementById('form_1').submit();">Logout</a>
-                        {{-- <button type="submit" class="nav-link bttn">Logout</button> --}}
+                        {{-- <a href="javascript:{}" onclick="document.getElementById('form_1').submit();">Logout</a> --}}
+                        <button type="submit" class="nav-link bttn">Logout</button>
                     </form>
                 </li>
             @else

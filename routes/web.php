@@ -50,18 +50,30 @@ Route::delete('/posts/{post}/unlike', 'App\Http\Controllers\LikeController@destr
 
 Route::post('/posts/{post}/comment', 'App\Http\Controllers\CommentController@store')
     ->name('comment');
+Route::delete('/posts/comment/{id}/delete', 'App\Http\Controllers\CommentController@destroy')
+    ->name('delete.comment');
+
+Route::post('/posts/{comment}/reply', 'App\Http\Controllers\ReplyCommentController@store')
+    ->name('reply-comment');
+Route::delete('/posts/{comment}/reply', 'App\Http\Controllers\ReplyCommentController@destroy')
+    ->name('delete.reply');
 
 Route::post('/comments/{comment}/like', 'App\Http\Controllers\CommentLikeController@store')
     ->name('comment-like');
 Route::delete('/comments/{comment}/unlike', 'App\Http\Controllers\CommentLikeController@destroy')
     ->name('comment-unlike');
 
+Route::post('/comments/reply/{id}/like', 'App\Http\Controllers\ReplyLikeController@store')
+    ->name('reply.like');
+Route::delete('/comments/reply/{id}/unlike', 'App\Http\Controllers\ReplyLikeController@destroy')
+    ->name('reply.unlike');
 
 Route::delete('/posts/{id}/delete', 'App\Http\Controllers\PostController@destroy')
     ->name('deletepost');
 
 Route::get('/user/{user:username}/posts', 'App\Http\Controllers\UserPostController@index')
     ->name('userpost');
+
 
 Route::get('/user/{post}', 'App\Http\Controllers\PostController@show')
     ->name('showpost');
