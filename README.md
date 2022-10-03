@@ -7,3 +7,34 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+# Laravel Mini Blog
+## Getting started
+
+Assuming you've already installed on your machine: PHP (>= 7.0.0), [Laravel](https://laravel.com) and [Composer](https://getcomposer.org)
+
+Clone the repository
+``` bash
+git clone https://github.com/FabioTECH1/Laravel-Blog.git
+```
+
+Switch to the repo folder
+``` bash
+cd Laravel-Blog
+```
+
+Install all the dependencies using composer
+``` bash
+composer install
+```
+
+Create .env file and make the required configuration changes in it, run the database migrations (**Set the database connection in .env before migrating**)
+``` bash
+php artisan migrate
+```
+
+Then launch the server:
+``` bash
+php artisan serve
+```
+
+The Laravel sample project is now up and running! Access it at http://127.0.0.1:8000.
